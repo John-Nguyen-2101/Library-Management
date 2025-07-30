@@ -102,10 +102,11 @@ input {
 #close-bnt1,
 .close-bnt {
     display: inline-block;
-    margin-top: 10px;
+    margin: 10px 0px 10px 50px;
     text-decoration: none;
     color: red;
     font-weight: bold;
+    
 }
 
 #close-bnt1:hover,
