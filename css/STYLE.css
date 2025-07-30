@@ -102,7 +102,7 @@ input {
 #close-bnt1,
 .close-bnt {
     display: inline-block;
-    margin: 10px 0px 10px 50px;
+    margin: 10px 0px 10px 100px;
     text-decoration: none;
     color: red;
     font-weight: bold;
