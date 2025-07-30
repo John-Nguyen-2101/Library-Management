@@ -1,125 +1,95 @@
-*{
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;              /* ✅ Chiếm toàn bộ màn hình */
-    max-width: 1200px;        /* ✅ Giới hạn tối đa 1200px */
-    margin: 0 auto;
+    font-family: Arial, sans-serif;
     text-align: center;
     color: brown;
-    box-sizing: border-box;   /* ✅ Tránh lỗi cộng padding */
-    padding: 20px;            /* ✅ Có khoảng cách nhỏ */
-}
-.container {
-    flex: 1 1 300px;           /* ✅ Linh hoạt co giãn với min 300px */
-    width: 100%;
-    height: auto;             /* ✅ Để chiều cao tự động co giãn */
-    padding: 50px;
-    border: 1px solid rgb(130, 124, 124);
-    text-align: center;
-    box-sizing: border-box;   /* ✅ Giúp padding không làm tràn khung */
-}
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-h1{
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.bnt{color: white;
-text-decoration: none;}
-button{
-    width: 200px;
-    height: 30px;
+button {
+    width: 100%;
+    max-width: 250px;
+    height: 40px;
+    margin: 10px 5px;
     border-radius: 5px;
     border: none;
     background-color: rgb(113, 215, 126);
     color: white;
     cursor: pointer;
-    margin: 5px 5px;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(168, 209, 173);
     color: rgb(96, 122, 216);
 }
-.wrap{
-    margin: 0 auto;
-    position: relative;
+
+.bnt {
+    text-decoration: none;
+    color: white;
+}
+
+.wrap {
     display: none;
-    float: center;
-    width: 80%;
-    border: 1px solid rgb(208, 202, 202);
-    border-radius: 15px;
-    padding: 0;
-}
-#close-bnt1{
-    position: absolute;
-    text-decoration: none;
-    color: rgb(229, 31, 31);
-    right: 35px;
-    top: 5px;
-    /* font-weight: bold; */
-}
-#close-bnt1:hover{
-    color: rgb(168, 209, 173);
-}
-.close-bnt{
-    margin-left: 435px;
-    text-decoration: none;
-    color: rgb(170, 86, 86);
-    right: 35px;
-    top: 5px;
-    font-size: 20px;
-    font-weight: bold;
-}
-form{
-    /* width: 300px; */
-    /* border: 1px solid rgb(130, 124, 124); */
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
     padding: 20px;
-    
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: #f9f9f9;
 }
-input{
-    width: 400px;
-    height: 30px;
+
+form {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid rgb(130, 124, 124);
+    border: 1px solid #aaa;
     padding-left: 10px;
-    margin-bottom: 20px;
 }
-.close-bnt{
-    padding: 0px 10px;
-    
-}
- .close-bnt:hover{
-    color: rgb(168, 209, 173);
-}
+
 .book-list {
     display: none;
-    text-align: center;
     width: 100%;
-    margin:30px 0;
+    overflow-x: auto; 
 }
 
 .book-list table {
-    margin: 0 auto;             /* ✅ Căn giữa bảng */
+    width: 100%;
     border-collapse: collapse;
-    width: 80%;
+    margin: 0 auto;
 }
 
-.book-list th, .book-list td {
+.book-list th,
+.book-list td {
     border: 1px solid #aaa;
     padding: 10px;
-    text-align: center;
 }
+
 .book-list th {
     background-color: #eee;
     font-weight: bold;
@@ -127,4 +97,37 @@ input{
 
 .book-list td {
     background-color: #fafafa;
+}
+
+#close-bnt1,
+.close-bnt {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+#close-bnt1:hover,
+.close-bnt:hover {
+    color: green;
+}
+
+/* --small device styles--- */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
 }
